@@ -4,7 +4,7 @@ cluster-monitor
 James Mithen  
 j.mithen@surrey.ac.uk
 
-![](https://raw.github.com/jpmit/cluster-monitor/pic.png)
+![Alt text](pic.png)
 
 This is a simple webapp, written in Python/Javascript, for easy
 monitoring of cluster computer jobs (specifically for the Sun Grid
