@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+</head>
+<title>JOBS monitor</title>
+<style>
+body {
+    background-color: #F4ECC7;
+    color: #9B1728;
+    font-family: "Share Tech Mono", monospace;
+}
+
+#main {
+    float: left;
+    border-right: 5px solid #9B1728;
+    padding: 10px;
+}
+
+#summary {
+    float: left;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+  <h1>Currently Running Jobs: <span id="nrunning"></span></h1>
+  <div id="joblist">
+  </div>
+</div>
+
+<div id="summary">
+  <h1>Summary:</h1>
+  <h2>Working Directories:</h2>
+  <div id="dirs">
+  </div>
+</div>
+<script src="monitor.js"></script>
+<script>
+  // initial call to populate
+  MONITOR.refreshJobs();
+  // update every minute
+  window.setInterval(MONITOR.refreshJobs, 60000);
+</script>
+</body>
+</html>
