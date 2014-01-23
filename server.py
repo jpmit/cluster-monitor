@@ -21,7 +21,7 @@ class JobDataManager(object):
 
         # we keep a persistent connection to the machine, and poll it
         # for information when required.
-        self.ssh.connect(MACHINE_NAME)
+        self.ssh.connect(self.MACHINE_NAME)
 
     def get_job_info(self):
         """Return data for all running jobs."""
