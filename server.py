@@ -9,6 +9,8 @@ class JobDataManager(object):
     HTTP request handler.
     """
 
+    MACHINE_NAME = 'eugenegm'
+
     def __init__(self):
     
         self.ssh = paramiko.SSHClient()
@@ -19,7 +21,7 @@ class JobDataManager(object):
 
         # we keep a persistent connection to the machine, and poll it
         # for information when required.
-        self.ssh.connect('eugenegm')
+        self.ssh.connect(MACHINE_NAME)
 
     def get_job_info(self):
         """Return data for all running jobs."""
@@ -44,6 +46,7 @@ class JobDataManager(object):
         dirs = [d.split()[1] for d in dirs if d != '']
         dirs.sort()
         
+        # this JSON data is returned to the browser
         data = {'alljobs': alljobs, 'dirs': dirs}
         return json.dumps(data)
 

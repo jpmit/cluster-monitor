@@ -1,4 +1,5 @@
-// This code passed through JSLint (www.jslint.com)
+// This code passed through JSLint (www.jslint.com), and survived to
+// tell the tale!
 var MONITOR = {};
 
 // 'Init-time branching'
